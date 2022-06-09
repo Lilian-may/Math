@@ -1,0 +1,22 @@
+/* Произведение последовательности квадратов чисел. */
+
+package main
+
+import "fmt"
+
+func main() {
+    sum := 0.0
+    var i, b float64
+    fmt.Println("Введите число начала последовательности: ")
+    fmt.Scan(&i)
+    fmt.Println("Введите конечное число последовательности: ")
+    fmt.Scan(&b)
+    for ; i <= b; i++ {
+        pr *= i * i
+}
+if sum < 9999999.9{
+fmt.Println("Результат: \n", pr)
+} else if sum > 9999999.9 {
+    fmt.Printf("%e", pr)
+}
+}
