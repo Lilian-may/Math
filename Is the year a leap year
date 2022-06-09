@@ -1,0 +1,16 @@
+/* Является ли год високосным. */
+
+package main
+import "fmt"
+func main(){
+  var a int64
+  fmt.Scan(&a)
+  switch {
+    case a%4 == 0 && a%100 != 0 || a%400 ==0:
+    fmt.Println("YES")
+    default:
+    fmt.Println("NO")
+  }
+}
+
+
