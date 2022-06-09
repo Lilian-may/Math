@@ -1,0 +1,17 @@
+/* Поиск катета прямоугольного треугольника. */
+
+package main
+import (
+"fmt"
+"math"
+)
+func main() {
+var a, c float64
+fmt.Println("Катет 1: ")
+fmt.Scan(&a)
+fmt.Println("Гипотенуза: ")
+fmt.Scan(&c)
+b := a*a - c*c
+b = math.Sqrt(b)
+fmt.Println("Катет 2: ", b)
+}
