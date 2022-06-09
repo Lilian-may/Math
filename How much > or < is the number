@@ -1,0 +1,24 @@
+/* На сколько больше или меньше число. */
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var a, b float64
+	fmt.Println("Введите первое число: ")
+	fmt.Scan(&a)
+	fmt.Println("Введите второе число: ")
+	fmt.Scan(&b)
+	c := a - b
+	d := b - a
+	if a > b {
+		fmt.Println("a больше b на", c)
+	} else if a < b {
+		fmt.Println("a меньше b на", d)
+	} else {
+		fmt.Println("a равно b")
+	}
+}
