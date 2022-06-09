@@ -1,0 +1,20 @@
+/* Поиск гипотенузы прямоугольного треугольника. */
+
+package main
+
+import ( 
+
+"fmt"
+"math"
+)
+func main(){
+var a, b float64
+fmt.Println("Катет 1: ")
+fmt.Scan(&a)
+fmt.Println("Катет 2: ")
+fmt.Scan(&b)
+c := a*a + b*b
+c = math.Sqrt(c)
+fmt.Println("Гипотенуза: ", c)
+}
+
