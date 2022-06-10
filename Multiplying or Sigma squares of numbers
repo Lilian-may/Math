@@ -1,0 +1,56 @@
+/* Произведение или Сигма квадратов чисел. */
+
+package main 
+  import "fmt" 
+  func sum() {
+      sum := 0.0
+      var i, b float64
+      fmt.Println("Введите число начала последовательности: ") 
+      fmt.Scan(&i)
+      fmt.Println("Введите конечное число последовательности: ") 
+      fmt.Scan(&b)
+      for ; i <= b; i++ {
+          sum += i * i 
+          
+      }
+      if sum < 9999999.9{
+          fmt.Println("Результат: \n", sum) 
+          
+      } else if sum > 9999999.9 {
+          fmt.Printf("%e", sum) 
+          
+      } 
+      
+  }
+  func pr() {
+pr := 1.0
+var i, b float64 
+fmt.Println("Введите число начала последовательности: ") 
+fmt.Scan(&i) 
+fmt.Println("Введите конечное число последовательности: ") 
+fmt.Scan(&b) 
+i = 1
+for ; i <= b; i++ { 
+    pr *= i * i
+}
+if pr < 9999999.9 {
+    fmt.Println("Результат: \n", pr)
+    
+} else if pr > 9999999.9 { 
+    fmt.Printf("%e", pr)
+    
+}
+      
+  }
+  func main() {
+      var a int
+      fmt.Println("Выберете тип операции:\n1.\tСигма.\n2.\tПроизведение.")
+      fmt.Scan(&a)
+      if a == 1 {
+          sum()
+      } else if a == 2 {
+          pr()
+      } else {
+          fmt.Println("Данная операция отсутствует!")
+      }
+  }
