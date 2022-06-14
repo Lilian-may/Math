@@ -1,0 +1,14 @@
+package main
+import "fmt"
+func main() {
+    var a int
+    fmt.Println("Введите значение факториала: ")
+    fmt.Scan(&a)
+    i := 1
+    b := 1
+    for ; i <= a; i++{
+        b *= i
+    }
+    fmt.Print("Факториал числа", a ,"равен: ")
+    fmt.Println(b)
+}
