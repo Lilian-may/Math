@@ -1,0 +1,22 @@
+//Нахождение корней квадратного уравнения
+package main
+import (
+    "fmt"
+    "math"
+    )
+    func main() {
+        var a, b, c float64
+        fmt.Println("Введите уравнение: ")
+        fmt.Scan(&a, &b, &c)
+        d := (b*b)-(4.0*a*c)
+        if d < 0 {
+            fmt.Println("Корней нет")
+        } else if d > 0 {
+            i1 := (-b - math.Sqrt(d)) / (2 * a)
+            i2 := (-b + math.Sqrt(d)) / (2 * a)
+            fmt.Println("x1 = ", i1, "\nx2 = ", i2)
+        } else if d == 0 {
+            i0 := -b / (2*a)
+            fmt.Println("x = ", i0)
+        }
+    }
