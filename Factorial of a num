@@ -9,6 +9,5 @@ func main() {
     for ; i <= a; i++{
         b *= i
     }
-    fmt.Print("Факториал числа", a ,"равен: ")
-    fmt.Println(b)
+    fmt.Print("Факториал числа ", a ," равен: ", b)
 }
