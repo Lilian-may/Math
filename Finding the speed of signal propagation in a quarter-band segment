@@ -1,0 +1,14 @@
+//Скорость сигнала в четвертьполосном отрезке
+package main
+import "fmt"
+func main() {
+    var v, f float64
+    fmt.Println("Введите длинну антенны в метрах: ")
+    fmt.Scan(&f)
+    fmt.Println("Введите резонансную частоту антенны в МГц: ")
+    fmt.Scan(&v)
+    d := f * 4
+    fmt.Println("Длинна волны:\n", d)
+    c := d * v
+    fmt.Println("Скорость распостранения сигнала в полотне:\n", c,"x 10^6 м/с")
+}
