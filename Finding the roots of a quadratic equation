@@ -9,14 +9,15 @@ import (
         fmt.Println("Введите уравнение: ")
         fmt.Scan(&a, &b, &c)
         d := (b*b)-(4.0*a*c)
+        fmt.Print("D = ", b, "² - 4 * ", a," * c = ", d,"\n")
         if d < 0 {
             fmt.Println("Корней нет")
         } else if d > 0 {
             i1 := (-b - math.Sqrt(d)) / (2 * a)
             i2 := (-b + math.Sqrt(d)) / (2 * a)
-            fmt.Println("x1 = ", i1, "\nx2 = ", i2)
+            fmt.Print("x1 = (-", b," - √", d, ") / (2 * ", a, ") = ", i1, "\nx2 = (-", b, " + √", d, ") / (2 * ", a, ") = ", i2)
         } else if d == 0 {
             i0 := -b / (2*a)
-            fmt.Println("x = ", i0)
+            fmt.Print("x = (-", b, ") / (2 * ", a, ") = ", i0)
         }
     }
