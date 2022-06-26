@@ -1,23 +1,64 @@
 //Нахождение корней квадратного уравнения
 package main
 import (
-    "fmt"
-    "math"
-    )
-    func main() {
-        var a, b, c float64
-        fmt.Println("Введите уравнение: ")
-        fmt.Scan(&a, &b, &c)
-        d := (b*b)-(4.0*a*c)
-        fmt.Print("D = ", b, "² - 4 * ", a," * c = ", d,"\n")
-        if d < 0 {
-            fmt.Println("Корней нет")
-        } else if d > 0 {
-            i1 := (-b - math.Sqrt(d)) / (2 * a)
-            i2 := (-b + math.Sqrt(d)) / (2 * a)
-            fmt.Print("x1 = (-", b," - √", d, ") / (2 * ", a, ") = ", i1, "\nx2 = (-", b, " + √", d, ") / (2 * ", a, ") = ", i2)
-        } else if d == 0 {
-            i0 := -b / (2*a)
-            fmt.Print("x = (-", b, ") / (2 * ", a, ") = ", i0)
-        }
-    }
+"fmt"
+"math"
+)
+func main() {
+var a float64
+fmt.Println("Выберете уравнение:\n1. ax²±bx±c=0\n2. ax²±bx=0\n3. ax²±c=0")
+fmt.Scan(&a)
+switch a {
+case 1: compsqeq()
+case 2: sqeqtypeb()
+case 3: sqeqtypec()
+default: fmt.Println("Unkown Number")
+}
+}
+func sqeqtypec() {
+var a, c float64
+fmt.Println("Введите уравнение:")
+fmt.Scan(&a, &c)
+if c < 0 {
+l := -(c)
+b := l/a
+e := math.Sqrt(b)
+fmt.Print(a, "x²+", c, "=0\nx²=(", l, "/", a, ")=", b, "\nx=±√",b, "\nx=±", e,"\n")
+} else if c > 0 {
+b := -(c/a)
+fmt.Print(a, "x²+", c, "=0\nx²=-(", c, "/", a,")=", b, "\nКорней нет")
+}
+}
+func sqeqtypeb() {
+var a, b float64
+fmt.Println("Введите уравнение:")
+fmt.Scan(&a, &b)
+if b > 0 {
+fmt.Print(a, "x²+", b, "x=0\n")
+fmt.Print("x(", a, "x+", b, ")\n")
+} else if b < 0 {
+fmt.Print(a, "x²", b, "x=0\n")
+fmt.Print("x(", a, "x-", b, ")\n")
+}
+fmt.Println("x1=0")
+x := -(b/a)
+fmt.Print("x2=-(", b,"/",a, ")\nx2=", x)
+}
+func compsqeq() {
+var a, b, c float64
+fmt.Println("Введите уравнение:")
+fmt.Scan(&a, &b, &c)
+fmt.Print(a, "x²+", b,"x+", c, "=0\n")
+d := (b*b)-(4.0*a*c)
+fmt.Print("D=", b, "²-4*", a,"*", c,"=", d,"\n")
+if d < 0 {
+fmt.Println("Корней нет")
+} else if d > 0 {
+i1 := (-b - math.Sqrt(d)) / (2 * a)
+i2 := (-b + math.Sqrt(d)) / (2 * a)
+fmt.Print("x1 = (-", b,"-√", d, ") / (2*", a, ")=", i1, "\nx2=(-", b, "+√", d, ") / (2*", a, ")=", i2,"\n")
+} else if d == 0 {
+i0 := -b / (2*a)
+fmt.Print("x = (-", b, ") / (2 * ", a, ") = ", i0)
+}
+}
