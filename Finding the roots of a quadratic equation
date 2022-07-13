@@ -1,6 +1,6 @@
 //Нахождение корней квадратного уравнения
 
-package main
+package sqeq
 import (
 "fmt"
 "math"
